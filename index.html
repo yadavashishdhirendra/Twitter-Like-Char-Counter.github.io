@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		body {
+			background: #c94b4b;
+			/* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #4b134f, #908a8a);
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			font-size: 22px;
+			font-weight: bold;
+			text-shadow: 0px 1px 2px #423F8D;
+			color: black;
+
+		}
+
+		.exceeded {
+			color: red;
+			font-weight: bolder;
+		}
+
+		input {
+			outline: none;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			border: none;
+			border-radius: 5px;
+			margin: 15px;
+			padding: 10px 20px 10px 20px;
+			font-weight: bolder;
+			font-size: 21px;
+		}
+
+		h1{
+			
+		}
+
+	</style>
+	<title>Twitter Like Character Counter Demo</title>
+</head>
+
+<body>
+
+	<header role="banner">
+		<h1 style="text-align: center;">Twitter Like Character Counter Demo</h1>
+	</header>
+
+	<div class="wrap" style="text-align: center;">
+		<main role="main">
+			<section>
+				<header>
+				</header>
+				<article id="examples">
+					<div class="example">
+						<h3>Char Counter</h3>
+						<form>
+							<p><input id="name"></input></p>
+						</form>
+					</div>
+				</article>
+			</section>
+		</main>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.charactercounter.js"></script>
+	<script>
+		$(function () {
+			//Example #1
+			$("#name").characterCounter({
+				limit: 20,
+				renderTotal: true
+			});
+		});
+	</script>
+</body>
+
+</html>
